@@ -1,0 +1,327 @@
+[vaudrypl@octal05 ift6266-speech-synth]$ train.py -t 54000 mlp_desc.yaml 
+/u/vaudrypl/IFT6266/pylearn2/pylearn2/models/mlp.py:40: UserWarning: MLP changing the recursion limit.
+  warnings.warn("MLP changing the recursion limit.")
+Parameter and initial learning rate summary:
+        h1_W: 0.1
+        h1_b: 0.1
+        h2_W: 0.1
+        h2_b: 0.1
+        h3_W: 0.1
+        h3_b: 0.1
+        h4_W: 0.1
+        h4_b: 0.1
+        y_W: 0.1
+        y_b: 0.1
+Compiling sgd_update...
+Compiling sgd_update done. Time elapsed: 2.035396 seconds
+compiling begin_record_entry...
+compiling begin_record_entry done. Time elapsed: 1.123550 seconds
+Monitored channels: 
+        learning_rate
+        test_h1_col_norms_max
+        test_h1_col_norms_mean
+        test_h1_col_norms_min
+        test_h1_max_x_max_u
+        test_h1_max_x_mean_u
+        test_h1_max_x_min_u
+        test_h1_mean_x_max_u
+        test_h1_mean_x_mean_u
+        test_h1_mean_x_min_u
+        test_h1_min_x_max_u
+        test_h1_min_x_mean_u
+        test_h1_min_x_min_u
+        test_h1_range_x_max_u
+        test_h1_range_x_mean_u
+        test_h1_range_x_min_u
+        test_h1_row_norms_max
+        test_h1_row_norms_mean
+        test_h1_row_norms_min
+        test_h2_col_norms_max
+        test_h2_col_norms_mean
+        test_h2_col_norms_min
+        test_h2_max_x_max_u
+        test_h2_max_x_mean_u
+        test_h2_max_x_min_u
+        test_h2_mean_x_max_u
+        test_h2_mean_x_mean_u
+        test_h2_mean_x_min_u
+        test_h2_min_x_max_u
+        test_h2_min_x_mean_u
+        test_h2_min_x_min_u
+        test_h2_range_x_max_u
+        test_h2_range_x_mean_u
+        test_h2_range_x_min_u
+        test_h2_row_norms_max
+        test_h2_row_norms_mean
+        test_h2_row_norms_min
+        test_h3_col_norms_max
+        test_h3_col_norms_mean
+        test_h3_col_norms_min
+        test_h3_max_x_max_u
+        test_h3_max_x_mean_u
+        test_h3_max_x_min_u
+        test_h3_mean_x_max_u
+        test_h3_mean_x_mean_u
+        test_h3_mean_x_min_u
+        test_h3_min_x_max_u
+        test_h3_min_x_mean_u
+        test_h3_min_x_min_u
+        test_h3_range_x_max_u
+        test_h3_range_x_mean_u
+        test_h3_range_x_min_u
+        test_h3_row_norms_max
+        test_h3_row_norms_mean
+        test_h3_row_norms_min
+        test_h4_col_norms_max
+        test_h4_col_norms_mean
+        test_h4_col_norms_min
+        test_h4_max_x_max_u
+        test_h4_max_x_mean_u
+        test_h4_max_x_min_u
+        test_h4_mean_x_max_u
+        test_h4_mean_x_mean_u
+        test_h4_mean_x_min_u
+        test_h4_min_x_max_u
+        test_h4_min_x_mean_u
+        test_h4_min_x_min_u
+        test_h4_range_x_max_u
+        test_h4_range_x_mean_u
+        test_h4_range_x_min_u
+        test_h4_row_norms_max
+        test_h4_row_norms_mean
+        test_h4_row_norms_min
+        test_objective
+        test_term_0
+        test_term_1_l1_penalty
+        test_y_col_norms_max
+        test_y_col_norms_mean
+        test_y_col_norms_min
+        test_y_max_x_max_u
+        test_y_max_x_mean_u
+        test_y_max_x_min_u
+        test_y_mean_x_max_u
+        test_y_mean_x_mean_u
+        test_y_mean_x_min_u
+        test_y_min_x_max_u
+        test_y_min_x_mean_u
+        test_y_min_x_min_u
+        test_y_range_x_max_u
+        test_y_range_x_mean_u
+        test_y_range_x_min_u
+        test_y_row_norms_max
+        test_y_row_norms_mean
+        test_y_row_norms_min
+        total_seconds_last_epoch
+        train_h1_col_norms_max
+        train_h1_col_norms_mean
+        train_h1_col_norms_min
+        train_h1_max_x_max_u
+        train_h1_max_x_mean_u
+        train_h1_max_x_min_u
+        train_h1_mean_x_max_u
+        train_h1_mean_x_mean_u
+        train_h1_mean_x_min_u
+        train_h1_min_x_max_u
+        train_h1_min_x_mean_u
+        train_h1_min_x_min_u
+        train_h1_range_x_max_u
+        train_h1_range_x_mean_u
+        train_h1_range_x_min_u
+        train_h1_row_norms_max
+        train_h1_row_norms_mean
+        train_h1_row_norms_min
+        train_h2_col_norms_max
+        train_h2_col_norms_mean
+        train_h2_col_norms_min
+        train_h2_max_x_max_u
+        train_h2_max_x_mean_u
+        train_h2_max_x_min_u
+        train_h2_mean_x_max_u
+        train_h2_mean_x_mean_u
+        train_h2_mean_x_min_u
+        train_h2_min_x_max_u
+        train_h2_min_x_mean_u
+        train_h2_min_x_min_u
+        train_h2_range_x_max_u
+        train_h2_range_x_mean_u
+        train_h2_range_x_min_u
+        train_h2_row_norms_max
+        train_h2_row_norms_mean
+        train_h2_row_norms_min
+        train_h3_col_norms_max
+        train_h3_col_norms_mean
+        train_h3_col_norms_min
+        train_h3_max_x_max_u
+        train_h3_max_x_mean_u
+        train_h3_max_x_min_u
+        train_h3_mean_x_max_u
+        train_h3_mean_x_mean_u
+        train_h3_mean_x_min_u
+        train_h3_min_x_max_u
+        train_h3_min_x_mean_u
+        train_h3_min_x_min_u
+        train_h3_range_x_max_u
+        train_h3_range_x_mean_u
+        train_h3_range_x_min_u
+        train_h3_row_norms_max
+        train_h3_row_norms_mean
+        train_h3_row_norms_min
+        train_h4_col_norms_max
+        train_h4_col_norms_mean
+        train_h4_col_norms_min
+        train_h4_max_x_max_u
+        train_h4_max_x_mean_u
+        train_h4_max_x_min_u
+        train_h4_mean_x_max_u
+        train_h4_mean_x_mean_u
+        train_h4_mean_x_min_u
+        train_h4_min_x_max_u
+        train_h4_min_x_mean_u
+        train_h4_min_x_min_u
+        train_h4_range_x_max_u
+        train_h4_range_x_mean_u
+        train_h4_range_x_min_u
+        train_h4_row_norms_max
+        train_h4_row_norms_mean
+        train_h4_row_norms_min
+        train_objective
+        train_term_0
+        train_term_1_l1_penalty
+        train_y_col_norms_max
+        train_y_col_norms_mean
+        train_y_col_norms_min
+        train_y_max_x_max_u
+        train_y_max_x_mean_u
+        train_y_max_x_min_u
+        train_y_mean_x_max_u
+        train_y_mean_x_mean_u
+        train_y_mean_x_min_u
+        train_y_min_x_max_u
+        train_y_min_x_mean_u
+        train_y_min_x_min_u
+        train_y_range_x_max_u
+        train_y_range_x_mean_u
+        train_y_range_x_min_u
+        train_y_row_norms_max
+        train_y_row_norms_mean
+        train_y_row_norms_min
+        training_seconds_this_epoch
+        valid_h1_col_norms_max
+        valid_h1_col_norms_mean
+        valid_h1_col_norms_min
+        valid_h1_max_x_max_u
+        valid_h1_max_x_mean_u
+        valid_h1_max_x_min_u
+        valid_h1_mean_x_max_u
+        valid_h1_mean_x_mean_u
+        valid_h1_mean_x_min_u
+        valid_h1_min_x_max_u
+        valid_h1_min_x_mean_u
+        valid_h1_min_x_min_u
+        valid_h1_range_x_max_u
+        valid_h1_range_x_mean_u
+        valid_h1_range_x_min_u
+        valid_h1_row_norms_max
+        valid_h1_row_norms_mean
+        valid_h1_row_norms_min
+        valid_h2_col_norms_max
+        valid_h2_col_norms_mean
+        valid_h2_col_norms_min
+        valid_h2_max_x_max_u
+        valid_h2_max_x_mean_u
+        valid_h2_max_x_min_u
+        valid_h2_mean_x_max_u
+        valid_h2_mean_x_mean_u
+        valid_h2_mean_x_min_u
+        valid_h2_min_x_max_u
+        valid_h2_min_x_mean_u
+        valid_h2_min_x_min_u
+        valid_h2_range_x_max_u
+        valid_h2_range_x_mean_u
+        valid_h2_range_x_min_u
+        valid_h2_row_norms_max
+        valid_h2_row_norms_mean
+        valid_h2_row_norms_min
+        valid_h3_col_norms_max
+        valid_h3_col_norms_mean
+        valid_h3_col_norms_min
+        valid_h3_max_x_max_u
+        valid_h3_max_x_mean_u
+        valid_h3_max_x_min_u
+        valid_h3_mean_x_max_u
+        valid_h3_mean_x_mean_u
+        valid_h3_mean_x_min_u
+        valid_h3_min_x_max_u
+        valid_h3_min_x_mean_u
+        valid_h3_min_x_min_u
+        valid_h3_range_x_max_u
+        valid_h3_range_x_mean_u
+        valid_h3_range_x_min_u
+        valid_h3_row_norms_max
+        valid_h3_row_norms_mean
+        valid_h3_row_norms_min
+        valid_h4_col_norms_max
+        valid_h4_col_norms_mean
+        valid_h4_col_norms_min
+        valid_h4_max_x_max_u
+        valid_h4_max_x_mean_u
+        valid_h4_max_x_min_u
+        valid_h4_mean_x_max_u
+        valid_h4_mean_x_mean_u
+        valid_h4_mean_x_min_u
+        valid_h4_min_x_max_u
+        valid_h4_min_x_mean_u
+        valid_h4_min_x_min_u
+        valid_h4_range_x_max_u
+        valid_h4_range_x_mean_u
+        valid_h4_range_x_min_u
+        valid_h4_row_norms_max
+        valid_h4_row_norms_mean
+        valid_h4_row_norms_min
+        valid_objective
+        valid_term_0
+        valid_term_1_l1_penalty
+        valid_y_col_norms_max
+        valid_y_col_norms_mean
+        valid_y_col_norms_min
+        valid_y_max_x_max_u
+        valid_y_max_x_mean_u
+        valid_y_max_x_min_u
+        valid_y_mean_x_max_u
+        valid_y_mean_x_mean_u
+        valid_y_mean_x_min_u
+        valid_y_min_x_max_u
+        valid_y_min_x_mean_u
+        valid_y_min_x_min_u
+        valid_y_range_x_max_u
+        valid_y_range_x_mean_u
+        valid_y_range_x_min_u
+        valid_y_row_norms_max
+        valid_y_row_norms_mean
+        valid_y_row_norms_min
+Compiling accum...
+graph size: 319
+graph size: 316
+graph size: 316
+Compiling accum done. Time elapsed: 15.848210 seconds
+Traceback (most recent call last):
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/scripts/train.py", line 206, in <module>
+    train_obj.main_loop(time_budget=args.time_budget)
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/train.py", line 182, in main_loop
+    self.run_callbacks_and_monitoring()
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/train.py", line 224, in run_callbacks_and_monitoring
+    self.model.monitor()
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/monitor.py", line 244, in __call__
+    for X in myiterator:
+  File "/u/vaudrypl/vdumoulin/research/code/pylearn2/utils/iteration.py", line 116, in next
+    self._convert)
+  File "/u/vaudrypl/vdumoulin/research/code/pylearn2/utils/iteration.py", line 114, in <genexpr>
+    fn(batch) if fn else batch for batch, fn in
+  File "/u/vaudrypl/vdumoulin/research/code/pylearn2/utils/iteration.py", line 89, in <lambda>
+    dspace.np_format_as(batch, sp))
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/space/__init__.py", line 622, in np_format_as
+    return self._format_as(batch, space)
+  File "/u/vaudrypl/IFT6266/pylearn2/pylearn2/space/__init__.py", line 662, in _format_as
+    % (self.dim, space.dim))
+ValueError: Can't convert between VectorSpaces of different sizes (160 to 1).
+

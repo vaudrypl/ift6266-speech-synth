@@ -1,0 +1,86 @@
+!obj:pylearn2.train.Train {
+    dataset: &train !obj:research.code.pylearn2.datasets.timit.TIMIT {
+        which_set: 'train',
+        frame_length: &fl 1,
+        frames_per_example: &fpe 160,
+        audio_only: &ao 1
+    },
+    model: !obj:pylearn2.models.mlp.MLP {
+        batch_size: 2048,
+        layers: [
+            !obj:pylearn2.models.mlp.RectifiedLinear {
+                layer_name: 'h1',
+                dim: 80,
+                irange: 0.05
+            },
+            !obj:pylearn2.models.mlp.RectifiedLinear {
+                layer_name: 'h2',
+                dim: 40,
+                irange: 0.05
+            },
+            !obj:pylearn2.models.mlp.RectifiedLinear {
+                layer_name: 'h3',
+                dim: 20,
+                irange: 0.05
+            },
+            !obj:pylearn2.models.mlp.RectifiedLinear {
+                layer_name: 'h4',
+                dim: 10,
+                irange: 0.05
+            },
+            !obj:pylearn2.models.mlp.Linear {
+                layer_name: 'y',
+                dim: 1,
+                irange: 0.05
+            }
+        ],
+        nvis: *fl
+    },
+    algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {
+        learning_rate: 0.1,
+        monitoring_dataset: {
+            'train': *train,
+            'valid': !obj:research.code.pylearn2.datasets.timit.TIMIT {
+                which_set: 'valid',
+                frame_length: *fl,
+                frames_per_example: *fpe,
+                audio_only: *ao
+            },
+            'test': !obj:research.code.pylearn2.datasets.timit.TIMIT {
+                which_set: 'test',
+                frame_length: *fl,
+                frames_per_example: *fpe,
+                audio_only: *ao
+            }
+        },
+        cost: !obj:pylearn2.costs.cost.SumOfCosts {
+            costs: [
+                !obj:pylearn2.costs.mlp.Default {},
+                !obj:pylearn2.costs.mlp.L1WeightDecay {
+                    coeffs: [1.0E-4, 1.0E-4, 1.0E-4, 1.0E-4, 1.0E-4]
+                }
+            ]
+        
+        },
+        termination_criterion: !obj:pylearn2.termination_criteria.MonitorBased {
+            channel_name: 'valid_objective',
+            prop_decrease: 0.005,
+            N: 10
+        },
+        train_iteration_mode: 'random_uniform',
+        monitor_iteration_mode: 'random_uniform',
+        batches_per_iter: 5000,
+        monitoring_batches: 7500
+    },
+    save_path: "mlp_desc_progress.pkl",
+    save_freq: 1,
+    extensions: [
+        !obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest {
+            channel_name: 'valid_objective',
+            save_path: 'mlp_desc_best.pkl'
+        },
+        !obj:pylearn2.training_algorithms.sgd.MonitorBasedLRAdjuster {
+            dataset_name: 'valid'
+        }
+    ]
+}
